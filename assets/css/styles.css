@@ -1,0 +1,126 @@
+/* PALETA DE COLORES  */
+:root {
+    --ColorFondo: #00C2CB;
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--ColorFondo);
+    width: 100%;
+    height: 640px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: inherit;
+}
+
+/* HERO */
+
+nav {
+    height: 15rem;
+    max-width: 100%;
+}
+
+.hero {
+    /* display: flex;
+    justify-content: center; */
+    /* background-size: cover; */
+
+}
+
+.heroImage {
+    max-width: 100%;
+}
+
+.objectfit {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -3.5rem;
+    align-items: center;
+
+}
+
+.objectfit>img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: black;
+    border: 3px solid #124C39;
+    z-index: 1000;
+
+}
+
+.tituloHeader {
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.galeria__subtitulo {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    height: 3rem;
+    z-index: 1000;
+    font-weight: 700;
+
+}
+
+
+/* REDES */
+.redes {
+    height: 16rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 4rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    padding: 0px;
+}
+
+.routes {
+    border-radius: 50%;
+    /* background-color: #FFFF; */
+    padding: 1rem;
+}
+
+.links {
+    max-width: 3rem;
+}
+
+/* MEDIA QUERIES  */
+/* @media (min-width: 180px) and (max-width: 368px) {
+    body {
+        width: 250px;
+
+    }
+
+    .hero {
+        width: 50%;
+    }
+
+} */
