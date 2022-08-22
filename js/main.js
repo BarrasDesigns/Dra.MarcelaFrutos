@@ -27,8 +27,12 @@ formulario.addEventListener('submit', (event) => {
     buttonSubmit.disabled = true
     setTimeout(() => {
         let nombreCompleto = document.querySelector('#nombreCompleto').value
-        let email = document.querySelector('#email').value
-        let mensaje = 'send?phone=' + telefono + '&text=*Cita agenda*%0A*Hola, quiero agendar una cita, mi nombre es*%0A' + nombreCompleto + '%0A*Mi correo es*%0A' + email + ''
+
+        let fecha = document.querySelector('#fecha').value
+        
+        let hora = document.querySelector('#hora').value
+
+        let mensaje = 'send?phone=' + telefono + '&text=*Agendar Cita*%0A*Hola, quiero agendar una cita, mi nombre es *%0A' + nombreCompleto + '%0A*Para el*%0A' + fecha + '%0A*A las*%0A' + hora + ''
         if(isMobile()) {
             window.open(urlMobile + mensaje, '_blank')
         }else{
