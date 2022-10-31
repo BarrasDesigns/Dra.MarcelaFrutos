@@ -1,6 +1,9 @@
 /* PALETA DE COLORES  */
 :root {
     --ColorFondo: #00C2CB;
+    --ColorHover: #277579;
+    --ColorBlanco: #ffff;
+    --ColorNegro: #000;
 }
 
 
@@ -25,10 +28,123 @@ body {
     box-sizing: inherit;
 }
 
-.section {
-    margin-top: 25px;
-    margin-bottom: 25px;
+/* GLOBALES  */
+ul {
+    list-style-type: none;
 }
+
+.section {
+    padding-bottom:20px;
+    padding-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: var(--ColorHover);
+    color: var(--ColorBlanco);
+    padding: 70px 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+}
+
+
+.footer-col {
+    width: 33% !important;
+    padding: 0 15px;
+}
+
+.footer-col,
+h4{
+    font-size: 18px;
+    color: var(--blanco);
+    text-transform: capitalize !important;
+    margin-bottom: 35px;
+    position: relative;
+
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--ColorBlanco);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--ColorFondo);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--blanco);
+    padding-left: 20px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(red, green, blue, 1);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--blanco);
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: var(--fondonegro);
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    max-width: 5rem;
+}
+
+.footer__made {
+    display: flex;
+    justify-content: center;
+    color: var(--blanco);
+}
+@media (max-width: 767px) {
+    .row{
+        flex-direction: column;
+        align-content: center;
+    }
+    .footer-col {
+      width: 100% !important;
+      margin-bottom: 30px;
+    }
+  
+  }
+  
+  @media (max-width: 574px) {
+    .footer-col {
+      width: 100%;
+    }
+  
+  }
 
 /* HERO */
 
@@ -51,7 +167,7 @@ nav {
 .objectfit {
     display: flex;
     justify-content: space-around;
-    margin-top: -3.5rem;
+    margin-top: -4.5rem;
     align-items: center;
 
 }
@@ -112,6 +228,15 @@ nav {
 
 .links {
     max-width: 3rem;
+    background-color: var(--ColorBlanco);
+    border-radius: 5rem;
+    border: solid #fff 4px;
+}
+
+.links:hover {
+    background-color: var(--ColorHover);
+    border: solid var(--ColorHover) 8px;
+
 }
 
 .enlace {
@@ -120,49 +245,14 @@ nav {
     justify-content: space-around;
 }
 
-.web {
-    width: 60px;
-    height: 60px;
-    background: url("../img/web_icon.png") no-repeat;
-}
-
-.web:hover {
-    background: url("../img/web_icon_hover.png") no-repeat;
-}
-
-.whatsapp {
-    width: 60px;
-    height: 60px;
-    background: url("../img/whatsapp_icon.png") no-repeat;
-}
-
-.whatsapp:hover {
-    background: url("../img/whatsapp_icon_hover.png") no-repeat;
-}
-
-.instagram {
-    width: 60px;
-    height: 60px;
-    background: url("../img/instagram_icon.png") no-repeat;
-}
-
-.instagram:hover {
-    background: url("../img/instagram_icon_hover.png") no-repeat;
-}
-
-.facebook {
-    width: 60px;
-    height: 60px;
-    background: url("../img/facebook_icon.png") no-repeat;
-}
-
-.facebook:hover {
-    background: url("../img/facebook_icon_hover.png") no-repeat;
-}
 
 @media (max-width: 428px) {
     .rutasEnlaces {
-        margin-top: 6rem;
+        margin-top: 10rem;
+    }
+    .galeria__subtitulo {
+        font-size: 20px;
+        padding-bottom: 50px;
     }
 
     .redes {
@@ -173,23 +263,12 @@ nav {
 
 }
 
-/* MEDIA QUERIES  */
-/* @media (min-width: 180px) and (max-width: 368px) {
-    body {
-        width: 250px;
-
-    }
-
-    .hero {
-        width: 50%;
-    }
-
-} */
 /* CARRUSEL DE SERVICIOS  */
-.carrusel{
+.carrusel {
     max-width: 90%;
     margin: auto;
 }
+
 .containerServicios {
     display: flex;
     overflow-x: scroll;
@@ -213,9 +292,20 @@ nav {
     background-color: aqua;
     cursor: pointer;
 }
-
+/* UBICACIÓN */
+.contMapa {
+    max-width: 90%;
+    margin: auto;
+}
+@media (max-width: 560px) {
+    .contMapa{
+        max-width: 100%;
+    }
+    
+}
 /* AGENDA UNA CITA */
 .cita {
     max-width: 70%;
     margin: auto;
+    margin-bottom: 30px;
 }
